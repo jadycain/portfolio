@@ -65,7 +65,6 @@ const app = new Vue({
         const url = '../json/data.json'
         axios.get(url).then((res) => {
             vm.slideData = res.data.works.projectData
-            console.log(res.data)
 
         })
         
