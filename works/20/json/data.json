@@ -1,0 +1,12 @@
+{
+    "data": {
+        "title": "中華郵政 影音投稿競賽",
+        "des": "成為 i 郵箱會員可上傳使用 i 郵箱影片參加競賽，也可投票參加抽獎 / 和後端合作串接 api / PHP套版",
+        "site": "https://event.udn.com/2021postibox/"
+    },
+    "skill": [
+        "HTML /  SCSS / JavaScript",
+        "Webpack"
+    ]
+
+}

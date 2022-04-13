@@ -1,0 +1,13 @@
+{
+    "data": {
+        "title": "畢業紀念冊",
+        "des": "首次接案作品 / 透過讀取json檔，讓不了解程式的人也可以手動增刪 / Lazy Load / 手刻燈箱",
+        "site": "https://jadycain.github.io/work/"
+    },
+    "skill": [
+        "設計",
+        "HTML /  SCSS / JavaScript",
+        "VUE"
+    ]
+
+}

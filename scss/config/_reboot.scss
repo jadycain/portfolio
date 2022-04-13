@@ -1,0 +1,91 @@
+// reboot
+
+* {
+    font-family: $EBGaramond, $NotoSerifTC;
+    box-sizing: border-box;
+    color: $black;
+}
+
+//
+//html
+//
+
+html {
+    margin: 0;
+    padding: 0;
+    
+}
+
+//
+//body
+//
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bgColor
+}
+
+.wrapper {
+
+    min-height: 100vh;
+    height: 100%;
+}
+
+//
+// Links
+// 
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+//
+// Img
+// 
+img {
+    display: block;
+    width: 100%;
+}
+
+
+//
+// List
+// 
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+
+    font-size: 2.5vw;
+    font-weight: $font-weight-regular;
+    letter-spacing: 1px;
+
+    @include RWD(md){
+
+        font-size: 25px;
+    }
+}
+
+h2 {
+
+    font-size: 2.3vw;
+    font-weight: $font-weight-medium;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+p {
+
+    @include RWD(sm){
+
+        font-size: 14px;
+    }
+}
+
+
+

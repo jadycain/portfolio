@@ -1,0 +1,212 @@
+.m-project {
+
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 10vw;
+
+    @include RWD(md){
+
+        width: 90vw;
+    }
+
+    &__back {
+
+        position: fixed;
+        left: 0;
+        padding-left: 2.5vw;
+        z-index: 19;
+        top: 65px;
+
+        &::before {
+
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2vw;
+            height: 1px;
+            background-color: black;
+            // background: currentColor;
+        }
+
+
+
+    }
+
+    &__pv {
+
+        @include content-row;
+        justify-content: flex-start;
+        padding-top: 65px;
+        
+        &-img {
+
+            width: 85%;
+
+            @include RWD(sm){
+
+                padding-right: 2vw;
+            }
+
+            
+
+        }
+
+        &-title {
+
+            width: 15%;
+            font-size: 60px;
+            @include content-row;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+
+            @include RWD(md){
+
+                font-size: clamp(25px, 7vw, 50px);
+            }
+
+            @include RWD(sm){
+
+                font-size: 25px;
+            }
+
+            .title {
+
+                
+                writing-mode: vertical-lr;
+
+            }
+
+            .name {
+
+                font-size: 40px;
+                writing-mode: vertical-lr;
+
+                @include RWD(md){
+
+                    font-size: clamp(20px, 4.5vw, 30px);
+                }
+
+                @include RWD(sm){
+
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+
+    &__detail {
+
+        @include content-column;
+        justify-content: space-between;
+
+        &-intro {
+
+            &_content {
+
+                @include RWD(md){
+
+                    width: 83%;
+                }
+            }
+
+        }
+
+        &-site {
+
+            @include content-row;
+            justify-content: flex-end;
+            padding-right: 10vw;
+            cursor: pointer;
+
+            &:hover {
+
+                span {
+
+                    color: $gray;
+
+                    &::after {
+
+                        left:  0px;
+                        background-color: $gray;
+                        // background: currentColor;
+                    }
+                }
+            }
+
+            span {
+
+                position: relative;
+                transition: .3s;
+
+                &::after {
+
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -10px;
+                    left:  10px;
+                    width: 75px;
+                    height: 1px;
+                    background-color: black;
+                    transition: .3s;
+                    // background: currentColor;
+                }
+            }
+        }
+
+    }
+
+
+    &__photos {
+
+        padding-top: 5vw;
+
+        &-container {
+
+            @include content-column;
+            padding-top: 5vw;
+
+            &_web {
+                margin-bottom: 5vw;
+                @include content-row;
+                align-items: flex-start;
+                max-height: 150vh;
+                overflow: hidden;
+                
+                img {
+
+                    width: 33%;
+                    padding-right: 5vw;
+                }
+            }
+
+            &_mob {
+                padding-bottom: 5vw;
+                @include content-row;
+                align-items: flex-start;
+                max-height: 150vh;
+                overflow: hidden;
+                
+                
+                
+
+                img {
+
+                    width: 33%;
+                    padding-right: 5vw;
+                }
+            }
+
+            
+
+            
+        }
+
+        
+    }
+
+
+}

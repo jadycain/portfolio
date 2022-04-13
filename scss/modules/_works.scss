@@ -1,0 +1,65 @@
+.m-works {
+
+    @include content-column;
+    padding-top: calc(65px + 10vw);
+
+    &__container {
+
+        width: 80vw;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        padding-bottom: 50px;
+
+        &-items {
+
+            width: 33%;
+            padding: 3vw 3vw 3vw 0;
+            // border: 1px solid red;
+            @include content-center-column;
+
+            @include RWD(md){
+
+                width: 50%;
+                padding: 2vw 3vw 2vw 0;
+            }
+            
+            &_img {
+
+                @include content-center-column;
+                
+
+                &:hover {
+
+                    img {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                img {
+                    // object-fit: cover;
+                    // height: 150px;
+                    transition: .5s;
+                    filter: grayscale(100%);
+
+                    @include RWD(md){
+
+                        height: 90px;
+                    }
+                }
+            }
+
+            &_title {
+                padding-top: 1vw;
+                margin-bottom: 1vw;
+                margin-top: 0;
+            }
+        }
+
+
+    }
+
+
+}

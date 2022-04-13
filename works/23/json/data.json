@@ -1,0 +1,14 @@
+{
+    "data": {
+        "title": "說故事工作坊",
+        "des": "課程導購靜態網站 / 輪播 / 上下收合效果",
+        "site": "https://udn.com/upf/ubrand/2021_data/orangestorytelling/"
+    },
+    "skill": [
+        "HTML /  SCSS / JavaScript",
+        "VUE",
+        "Swiper.js",
+        "Webpack"
+    ]
+
+}

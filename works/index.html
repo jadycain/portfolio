@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/all.css">
+
+    <!-- Vue 開發模式 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- axios -->
+    <script src="../vendor/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <div class="wrapper" ref="wrapper">
+            <!-- header -->
+            <header class="l-header" data-scroll-header>
+                <ul class="l-header__menu" :class="{ active : isActive }">
+                    <li class="l-header__menu-item">
+                        <a href="../index.html" rel="noopener noreferrer">HOME</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a href="../about/" rel="noopener noreferrer">ABOUT</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a href="index.html" rel="noopener noreferrer">PROJECT</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a data-scroll href="#contact" rel="noopener noreferrer">CONTACT</a>
+                    </li>
+                </ul>
+                <div class="l-header__hamburger" :class="{ active : isActive }" @click="toggleHam">
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                </div>
+            </header>
+
+            <div class="l-body">
+                <div class="m-sub">
+                    <div class="m-sub__container">
+                        <div class="m-sub__container-word" ref="subword">
+                            Website
+                        </div>
+                    </div>
+                </div>
+                <div class="m-main">
+                    <div class="m-works">
+                        <div class="m-works__container" data-aos="fade-in" data-aos-duration="2000">
+                            <div  class="m-works__container-items" v-for="item in slideData" :key="item.index">
+                                <a class="m-works__container-items_img" :href="`${item.index}/`">
+                                    <img :src="`../img/${item.img}`" alt="">
+                                    <p class="m-works__container-items_title">
+                                        {{ item.title }}
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <footer class="l-footer" id="contact" ref="contact">
+                <div class="l-footer__list">
+                    <div class="l-footer__list-title">
+                        Contact
+                    </div>
+                    <div class="l-footer__list-email">
+                        Email: jadycain@gmail.com
+                    </div>
+                </div>
+                <div class="l-footer__copyright">
+                    <p>COPYRIGHT © SUNNY SIDE. ALL RIGHTS RESERVED.</p>
+                </div>
+            </footer>
+
+        </div> <!-- wrapper end -->
+    </div> <!-- app end -->
+    
+</body>
+
+<script src="../js/works.js"></script>
+</html>

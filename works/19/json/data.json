@@ -1,0 +1,13 @@
+{
+    "data": {
+        "title": "聯合70 祝福專案",
+        "des": "聯合報70週年靜態網站 / 運用VUE製作篩選、搜尋功能 / Lazy load",
+        "site": "https://udn.com/upf/ubrand/2021_data/sustainability/"
+    },
+    "skill": [
+        "HTML /  SCSS / JavaScript",
+        "VUE",
+        "Lottie"
+    ]
+
+}

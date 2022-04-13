@@ -1,0 +1,14 @@
+{
+    "data": {
+        "title": "食藥署 黃金食譜保衛戰",
+        "des": "完成問答和拖曳遊戲即可留下資料參加抽獎活動 / 拖曳效果 / Q&A互動 / 和後端合作串接api",
+        "site": "https://event.udn.com/2021food/"
+    },
+    "skill": [
+        "HTML /  CSS / JavaScript",
+        "VUE",
+        "Draggabilly",
+        "Webpack"
+    ]
+
+}

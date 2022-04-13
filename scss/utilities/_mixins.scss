@@ -1,0 +1,140 @@
+
+// 背景填滿置中
+@mixin bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+// 內容垂直置中 橫式
+@mixin content-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// 內容垂直置中 直式
+@mixin content-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+
+// 內容直式
+@mixin content-column {
+    display: flex;
+    flex-direction: column;   
+}
+
+// 內容橫式
+@mixin content-row {
+    display: flex;
+    flex-direction: row;   
+}
+
+
+// 容器水平垂直置中
+@mixin container-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+// 塞滿
+@mixin full {
+    width: 100%;
+    height: 100%;
+}
+
+// 圓形
+@mixin circle {
+    border-radius: 50%;
+}
+
+
+// RWD斷點
+@mixin RWD($media) {
+    @if $media==xs {
+        @media screen and (max-width: 319px) {
+            @content;
+        }
+    }
+    @else if $media==ss {
+        @media screen and (max-width: 320px) {
+            @content;
+        }
+    }
+    @else if $media==sp360 {
+        @media screen and (max-width: 360px) {
+            @content;
+        }
+    }
+    @else if $media==sp375 {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    @else if $media==sp390 {
+        @media screen and (max-width: 390px) {
+            @content;
+        }
+    }
+    @else if $media==sp414 {
+        @media screen and (max-width: 414px) {
+            @content;
+        }
+    }
+    @else if $media==sm {
+        @media screen and (max-width: 428px) {
+            @content;
+        }
+    }
+    @else if $media==sp500 {
+        @media screen and (max-width: 500px) {
+            @content;
+        }
+    }
+    @else if $media==sp600 {
+        @media screen and (max-width: 600px) {
+            @content;
+        }
+    }
+    @else if $media==sp650 {
+        @media screen and (max-width: 650px) {
+            @content;
+        }
+    }
+    @else if $media==md {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $media==sp950 {
+        @media screen and (max-width: 950px) {
+            @content;
+        }
+    }
+    @else if $media==lg {
+        @media screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $media==xl {
+        @media screen and (max-width: 1280px) {
+            @content;
+        }
+    }
+
+    @else if $media==sp1600 {
+        @media screen and (max-width: 1600px) {
+            @content;
+        }
+    }
+    
+}

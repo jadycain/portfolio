@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- Vue 開發模式 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- axios -->
+    <script src="vendor/axios.min.js"></script>
+    
+
+</head>
+<body>
+    <div id="app">
+        <div class="wrapper" ref="wrapper">
+            <!-- header -->
+            <header class="l-header" data-scroll-header>
+                <ul class="l-header__menu" :class="{ active : isActive }">
+                    <li class="l-header__menu-item">
+                        <a href="index.html" rel="noopener noreferrer">HOME</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a data-scroll href="#about" rel="noopener noreferrer">ABOUT</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a data-scroll href="#project" rel="noopener noreferrer">PROJECT</a>
+                    </li>
+                    <li class="l-header__menu-item">
+                        <a data-scroll href="#contact" rel="noopener noreferrer">CONTACT</a>
+                    </li>
+                </ul>
+                <div class="l-header__hamburger" :class="{ active : isActive }" @click="toggleHam">
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                    <span class="l-header__hamburger-bar"></span>
+                </div>
+            </header>
+
+            <div class="l-body">
+                <div class="m-sub">
+                    <div class="m-sub__container">
+                        <div class="m-sub__container-word" ref="subword">
+                            <!-- {{ text }} -->
+                            <!-- Who Am I -->
+                        </div>
+                    </div>
+                </div>
+                <div class="m-main">
+                    <!-- pv -->
+                    <div class="m-main__pv" ref="pv">
+                        <div class="m-main__pv-slogan">
+                            <div class="m-main__pv-slogan_en" ref="slogan">
+                                <!-- Let a Little Sunshine In.  -->
+                                Let a little sunshine
+                            </div>
+                            <div class="m-main__pv-slogan_ch" ref="subslogan">
+                                into your heart.
+                                <!-- 用網頁改變世界 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- about -->
+                    <div class="m-main__about" id="about" ref="about" data-aos="fade-in" data-aos-duration="2000">
+                        <div class="m-main__about-title">
+                            我想用網頁改變世界
+                        </div>
+                        <div class="m-main__about-content">
+                            <p>大學就讀日本語文學系，大三至京都留學一年，並於留學期間取得日本語能力檢定1級證照。</p>
+                            <p>畢業後任職於兩間公司，皆擔任日文業務助理。因主管給予嘗試製作網頁的機會，踏入前端世界。</p>
+                            <p>為了深入了解前端知識，選擇至中壢資策會學習，結業後進入媒體業，擔任助理前端工程師。</p>
+                            <p>未來希望能多接觸於行銷、UIUX或產品管理，站在使用者立場與市場角度開發產品。</p>
+                            <p>運用網頁傳遞訊息、改變世界是我對自己的期許。</p>
+                        </div>
+                        <div class="m-main__about-button">
+                            <a href="about/" class="m-main__about-button_box">
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- work -->
+                    <div class="m-main__works" id="project" ref="project" data-aos="fade-in" data-aos-duration="2000">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="item in slideData" :key="item.index">
+                                    <a :href="`../works/${item.index}/`">
+                                        <img :src="`img/${item.img}`">
+                                        <p>{{ item.title }}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="m-main__works-button">
+                            <a href="works/index.html" class="m-main__works-button_box">
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="l-footer" id="contact" ref="contact">
+                <div class="l-footer__list">
+                    <div class="l-footer__list-title">
+                        Contact
+                    </div>
+                    <div class="l-footer__list-email">
+                        Email: jadycain@gmail.com
+                    </div>
+                </div>
+                <div class="l-footer__copyright">
+                    <p>COPYRIGHT © SUNNY SIDE. ALL RIGHTS RESERVED.</p>
+                </div>
+            </footer>
+
+        </div> <!-- wrapper end -->
+    </div> <!-- app end -->
+</body>
+
+<script src="js/main.js"></script>
+</html>
