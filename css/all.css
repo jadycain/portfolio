@@ -88,7 +88,7 @@ h2 {
     top: 0px;
     height: 100vh;
     height: calc(var(--menuVh, 1vh) * 100);
-    transform: translateY(-150%);
+    transform: translateY(-180%);
     transition: all 0.6s cubic-bezier(1, 0.5, 0, 1);
     margin: 0;
     background: #fafafa;
@@ -319,6 +319,7 @@ h2 {
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .m-main__pv-slogan_en {
@@ -363,6 +364,26 @@ h2 {
 .m-main__pv-slogan_ch .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.m-main__pv-scroll {
+  writing-mode: vertical-lr;
+  position: absolute;
+  padding-bottom: calc(100px + 1vw);
+  right: 3vw;
+  bottom: 0px;
+  opacity: 0;
+}
+
+.m-main__pv-scroll::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background-color: #000;
 }
 
 .m-main__about {

@@ -21,7 +21,7 @@
             top: 0px;
             height: 100vh;
             height: calc(var(--menuVh, 1vh) * 100);
-            transform: translateY(-150%);
+            transform: translateY(-180%);
             transition: all .6s cubic-bezier(1, 0.5, 0, 1);
             margin: 0;
             // height: auto;

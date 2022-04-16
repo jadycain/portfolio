@@ -137,8 +137,18 @@ const app = new Vue({
                 opacity: [0,1],
                 easing: "easeOutExpo",
                 duration: 1200,
-                delay: (el, i) => 500 + 30 * i
+                delay: (el, i) => 500 + 30 * i,
+                complete: function() {
+                    anime({
+                        targets: '.m-main__pv-scroll',
+                        opacity: [0,0.8],
+                        easing: "linear",
+                        duration: 1500,
+                      });
+                    
+                }
             })
+            
         },
 
     },
@@ -184,7 +194,7 @@ const app = new Vue({
         vm.refreshViewHeight()
         const ro = new ResizeObserver(entry => {
             const cr = entry[0].contentRect
-            
+            vm.refreshViewHeight()
             if(cr.width <= 428) {
                 if(vm.observer != '') {
                     targets.forEach(target => vm.observer.unobserve(target))
